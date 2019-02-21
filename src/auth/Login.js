@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import APIURL from '../helpers/environment';
 import {
     Form,
     FormGroup,
@@ -22,7 +23,7 @@ class Login extends Component {
         });
     }
     handleSubmit = (event) => {
-        fetch("http://localhost:3000/api/login", {
+        fetch(`${APIURL}/api/login`, {
             method: 'POST',
             body: JSON.stringify({user:this.state}),
             headers: new Headers({

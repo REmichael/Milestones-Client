@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './MilestoneCreate.css'
+import APIURL from '../helpers/environment';
 import {
     Button,
     Form,
@@ -28,7 +29,7 @@ class MilestoneCreate extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        fetch("http://localhost:3000/api/milestone", {
+        fetch(`${APIURL}/api/milestone`, {
             method: 'POST',
             body: JSON.stringify(this.state),
             headers: new Headers({

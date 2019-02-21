@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MilestoneCreate from './MilestoneCreate';
 import MilestoneTable from './MilestoneTable';
+import APIURL from '../helpers/environment';
 import {
     Container,
     Row,
@@ -23,7 +24,7 @@ class MilestoneIndex extends Component {
     }
 
     fetchMilestones = () => {
-        fetch("http://localhost:3000/api/milestone", {
+        fetch(`${APIURL}/api/milestone`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
@@ -37,7 +38,7 @@ class MilestoneIndex extends Component {
     }
 
     milestoneDelete = (event) => {
-        fetch(`http://localhost:3000/api/milestone/${event.target.id}`, {
+        fetch(`${APIURL}/api/milestone/${event.target.id}`, {
             method: 'DELETE',
             body: JSON.stringify({ log: { id: event.target.id}}),
             headers: new Headers({
@@ -49,7 +50,7 @@ class MilestoneIndex extends Component {
     }
 
     milestoneUpdate = (event, milestones) => {
-        fetch(`http://localhost:3000/api/milestone/${milestones.id}`, {
+        fetch(`${APIURL}/api/milestone/${milestones.id}`, {
             method: 'PUT',
             body: JSON.stringify({mileData: milestones}),
             headers: new Headers({
