@@ -1,0 +1,22 @@
+.mt-container {
+    background-color: white;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+    margin-top: 6em;
+    width: 50em;
+}
+
+.table-style {
+    background-color: yellowgreen;
+    table-layout: fixed;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+/* .tbody-scroll {
+    overflow: scroll;
+    height: 100px; 
+} */
