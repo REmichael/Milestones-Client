@@ -8,6 +8,12 @@ import {
     Col
 } from 'reactstrap';
 
+const styles = {
+    h1: {
+        fontFamily: 'Itty',
+    } 
+}
+
 const Auth = (props) => {
     return (
         <Container className="auth-container">

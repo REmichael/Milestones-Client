@@ -12,7 +12,9 @@ import {
 
 const styles = {
     navbar: {
-      backgroundColor: '#FF9807',
+      backgroundColor: '#CCE7F4',
+      padding: 0,
+      margin: 0,
     },
 }
 
@@ -32,7 +34,7 @@ class NavBar extends Component {
 
     render() {
         return (
-            <div style={styles.navbar}>
+            <div className="navbar" style={styles.navbar}>
                 <Navbar color="faded" light expand="md">
                     <NavbarBrand href="/">M I L E S T O N E S</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />

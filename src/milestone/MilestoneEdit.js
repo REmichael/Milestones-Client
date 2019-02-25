@@ -18,7 +18,7 @@ class MilestoneEdit extends React.Component {
             id: '',
             childName: '',
             milestone: '',
-            date: '',
+            selectedDate: new Date(),
             description: ''
         };
     }
