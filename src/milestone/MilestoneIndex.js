@@ -84,7 +84,7 @@ class MilestoneIndex extends Component {
                     <Col md="9">
                         {milestones}
                     </Col>
-                    <Col md="12">
+                    <Col>
                         {
                             this.state.updatePressed ? <MilestoneEdit t={this.state.updatePressed} update={this.milestoneUpdate} milestone={this.state.milestoneToUpdate} />
                                 : <div></div>

@@ -12,9 +12,8 @@ const MilestoneTable = (props) => {
     return (
         <Container className="mt-container">
             <Row>
-                <Col md="1">
-                </Col>
-                <Col md="10">
+                
+                <Col md="12">
                 <div>
                     <h3>MILESTONES</h3>
                     <hr />
@@ -53,8 +52,7 @@ const MilestoneTable = (props) => {
                     </Table>
                 </div>
                 </Col>
-                <Col md="1">
-                </Col>
+                
             </Row>
         </Container >
     );
