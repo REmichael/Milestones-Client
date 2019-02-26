@@ -1,14 +1,14 @@
  .mc-div {
     background: rgba(115, 209, 156, .7);
-    /* padding-right: 2em;
+     /* padding-right: 2em;
     padding-left: 2em;
     padding-top: 2em;
     padding-bottom: 2em;
-    position: relative; */
-    /* margin-top: 5em;
+    position: relative; 
+     margin-top: 5em;
     bottom: 2.3em;
     left: -30%;
-    width: 110%; */
+    width: 110%;  */
     
   
     
@@ -22,7 +22,19 @@
 @media (max-width: 991px) {
     
 }
-@media (max-width: 767px) {
+@media (min-width: 767px) {
+    .mc-div {
+        background: rgba(115, 209, 156, .7);
+         padding-right: 2em;
+        padding-left: 2em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        position: relative; 
+         margin-top: 5em;
+        bottom: 2.3em;
+        left: -30%;
+        width: 110%;
+    }
 }
 @media (max-width: 479px) {
 }

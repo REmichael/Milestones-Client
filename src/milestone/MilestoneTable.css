@@ -1,6 +1,6 @@
 .mt-container {
     background: rgba(115, 209, 156, .7);
-}
+
     /* padding-right: 2em;
     padding-left: 2em;
     padding-top: 2em;
@@ -8,8 +8,9 @@
     position: relative;
     margin-top: 6em;
     width: 50em;
-    border-radius: 5px;
-} */
+    border-radius: 5px; */
+}
+
 
 .delete {
     float: right;
@@ -33,7 +34,18 @@
 
 @media (max-width: 991px) {
 }
-@media (max-width: 767px) {
+@media (min-width: 767px) {
+    .mt-container {
+        background: rgba(115, 209, 156, .7);    
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+    margin-top: 6em;
+    width: 50em;
+    border-radius: 5px;
+    }
 }
 @media (max-width: 479px) {
 }
