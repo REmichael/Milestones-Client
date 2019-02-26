@@ -25,6 +25,7 @@ class Signup extends Component {
     }
 
     handleSubmit = (event) => {
+        console.log(window.location.hostname)
         fetch(`${APIURL}/api/user`, {
             method: "POST",
             body: JSON.stringify({user:this.state}),
