@@ -91,7 +91,7 @@ class MilestoneCreate extends Component {
                     <FormGroup>
                         <MuiPickersUtilsProvider utils={DateFnsUtils}>
                             <Grid container className={classes.grid} justify="space-around">
-                                <DatePicker margin="normal" label="Pick a Date" value={this.state.date} onChange={this.handleDateChange} />
+                                <DatePicker margin="normal" label="Select a Date" value={this.state.date} onChange={this.handleDateChange} />
                             </Grid>
                         </MuiPickersUtilsProvider>
                     </FormGroup>

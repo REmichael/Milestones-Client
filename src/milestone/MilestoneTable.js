@@ -15,7 +15,7 @@ const MilestoneTable = (props) => {
                 
                 <Col md="12">
                 <div>
-                    <h3>MILESTONES</h3>
+                    <h3 className="h3">MILESTONES</h3>
                     <hr />
                     <Table >
                         <thead>

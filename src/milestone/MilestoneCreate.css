@@ -20,8 +20,19 @@
 
 /* }  */
 @media (max-width: 991px) {
-    
 }
+
+@media (max-width: 767px) {
+    .mc-div { 
+        position: relative;
+        margin-top: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
 @media (min-width: 767px) {
     .mc-div {
         background: rgba(115, 209, 156, .7);
@@ -29,11 +40,11 @@
         padding-left: 2em;
         padding-top: 2em;
         padding-bottom: 2em;
-        position: relative; 
+        position: fixed; 
          margin-top: 5em;
         bottom: 2.3em;
-        left: -30%;
-        width: 110%;
+        left: 0%;
+        width: 17rem;
     }
 }
 @media (max-width: 479px) {

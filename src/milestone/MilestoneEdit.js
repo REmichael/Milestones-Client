@@ -1,4 +1,10 @@
+import 'date-fns'; 
 import React from 'react';
+import PropTypes from 'prop-types';
+import Grid from '@material-ui/core/Grid';
+import { withStyles } from '@material-ui/core/styles';
+import DateFnsUtils from '@date-io/date-fns';
+import { MuiPickersUtilsProvider, DatePicker } from 'material-ui-pickers';
 import {
     Button,
     Form,
@@ -10,6 +16,12 @@ import {
     ModalBody
 } from 'reactstrap';
 
+const styles = {
+    grid: {
+        width: '60%'
+    },
+};
+
 class MilestoneEdit extends React.Component {
 
     constructor(props) {
@@ -18,7 +30,7 @@ class MilestoneEdit extends React.Component {
             id: '',
             childName: '',
             milestone: '',
-            selectedDate: new Date(),
+            date: new Date(),
             description: ''
         };
     }
@@ -33,6 +45,12 @@ class MilestoneEdit extends React.Component {
         })
     }
 
+    handleDateChange = (date) => {
+        this.setState({
+            date: date
+        });
+    };
+
     handleChange = (event) => {
         this.setState({
             [event.target.name]: event.target.value
@@ -45,6 +63,7 @@ class MilestoneEdit extends React.Component {
     }
 
     render() {
+        const { classes } = this.props;
         return (
             <div>
                 <Modal isOpen={true}>
@@ -60,8 +79,11 @@ class MilestoneEdit extends React.Component {
                                 <Input id="milestone" type="text" name="milestone" value={this.state.milestone} placeholder="enter milestone" onChange={this.handleChange} />
                             </FormGroup>
                             <FormGroup>
-                                <Label for="date">date</Label>
-                                <Input id="date" type="text" name="date" value={this.state.date} placeholder="enter date" onChange={this.handleChange} />
+                                <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                                    <Grid container className={classes.grid} justify="space-around">
+                                        <DatePicker margin="normal" label="Select a Date" value={this.state.date} onChange={this.handleDateChange} />
+                                    </Grid>
+                                </MuiPickersUtilsProvider>
                             </FormGroup>
                             <FormGroup>
                                 <Label for="description">Milestone</Label>
@@ -72,8 +94,12 @@ class MilestoneEdit extends React.Component {
                     </ModalBody>
                 </Modal>
             </div>
-        )
+        );
     }
 }
 
-export default MilestoneEdit;
+MilestoneEdit.propTypes= {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(MilestoneEdit);
