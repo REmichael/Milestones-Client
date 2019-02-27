@@ -32,6 +32,7 @@ class MilestoneEdit extends React.Component {
             milestone: '',
             date: new Date(),
             description: '',
+            image: '',
         };
     }
 
@@ -42,6 +43,7 @@ class MilestoneEdit extends React.Component {
             milestone: this.props.milestone.milestone,
             date: this.props.milestone.date,
             description: this.props.milestone.description,
+            image: this.props.milestone.image,
         })
     }
 
@@ -88,6 +90,10 @@ class MilestoneEdit extends React.Component {
                             <FormGroup>
                                 <Label for="description">Milestone</Label>
                                 <Input id="description" type="text" name="description" value={this.state.description} placeholder="enter description" onChange={this.handleChange} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label for="Picture URL">Picture</Label>
+                                <Input id="image" type="text" name="image" value={this.state.image} placeholder="enter URL" onChange={this.handleChange} />
                             </FormGroup>
                             <Button type="submit" color="primary">Submit</Button>
                         </Form>

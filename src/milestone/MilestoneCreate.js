@@ -35,6 +35,7 @@ class MilestoneCreate extends Component {
             milestone: '',
             date: new Date(),
             description: '',
+            image: '',
         };
     }
 
@@ -71,6 +72,7 @@ class MilestoneCreate extends Component {
                     milestone: '',
                     date: new Date(),
                     description: '',
+                    photo: '',
                 })
             })
     }
@@ -103,6 +105,10 @@ class MilestoneCreate extends Component {
                             <FormGroup>
                                 <Label for="description">Description</Label>
                                 <Input id="description" type="text" name="description" className="mc-inputDescription" value={this.state.description} placeholder="enter description" onChange={this.handleChange} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label for="Picture URL">Picture URL</Label>
+                                <Input id="image" type="text" name="image" value={this.state.image} placeholder="Enter Image URL" onChange={this.handleChange} />
                             </FormGroup>
                             <Button type="submit" color="info">Submit</Button>
                         </Form>
