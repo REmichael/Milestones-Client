@@ -1,29 +1,59 @@
-.auth-container {
+/* .auth-container {
+    margin-top: 3em;
+    padding: 2em;
+    border: .2em solid #e5e5e5;
+    border-radius: 0.4em;
+    box-shadow: 2px 4px 20px #f0f0f0;
+} */
+
+/* .login-col {
+    border-left: 1px solid black;
+} */
+
+.auth-h1 {
+    font-size: 6em;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+    .auth-container { 
+        position: relative;
+        margin-top: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .auth-h1 {
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .login-col {
+        padding-top: 2rem;
+    }
+}
+
+@media (min-width: 767px) {
+    .auth-container {
     margin-top: 3em;
     padding: 2em;
     border: .2em solid #e5e5e5;
     border-radius: 0.4em;
     box-shadow: 2px 4px 20px #f0f0f0;
 }
-
 .login-col {
     border-left: 1px solid black;
 }
-
-.auth-h1 {
-    font-size: 6em;
-    text-align: center;
-
-    
 }
 
-/* 
-.auth-row1 {
-    background-color: rgb(22, 145, 167);
-    border-radius: .5em;
-     padding-bottom: 2em; 
-     
-}    */
+@media (max-width: 479px) {
+}
+
+
 
 /* iPad Pro PORTRAIT */
 @media screen and (max-width: 1024px) {

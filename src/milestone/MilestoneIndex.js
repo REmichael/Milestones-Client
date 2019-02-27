@@ -37,10 +37,10 @@ class MilestoneIndex extends Component {
             })
     }
 
-    milestoneDelete = (event) => {
-        fetch(`${APIURL}/api/milestone/${event.target.id}`, {
+    milestoneDelete = (event, id) => {
+        console.log(event.target.id)
+        fetch(`${APIURL}/api/milestone/${id}`, {
             method: 'DELETE',
-            body: JSON.stringify({ log: { id: event.target.id } }),
             headers: new Headers({
                 'Content-Type': 'application/json',
                 'Authorization': this.props.token
@@ -74,7 +74,7 @@ class MilestoneIndex extends Component {
     render() {
         const milestones = this.state.milestones.length >= 1 ?
             <MilestoneTable milestones={this.state.milestones}
-                delete={this.milestoneDelete} update={this.setUpdatedMilestone} /> : <h2>Save a Milestone to see your table</h2>
+                delete={this.milestoneDelete} update={this.setUpdatedMilestone} /> : <div className="splash-phrase"><h2 className="sph-h2">Milestones, an app for a every parent to track those signficant moments of change and development in thier Child's life.<br></br>Use Milestones to save those fleeting moments before they become a forgotten memory.</h2></div>
         return (
             <Container>
                 <Row>

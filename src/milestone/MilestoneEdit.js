@@ -31,7 +31,8 @@ class MilestoneEdit extends React.Component {
             childName: '',
             milestone: '',
             date: new Date(),
-            description: ''
+            description: '',
+            photo: ''
         };
     }
 
@@ -42,6 +43,7 @@ class MilestoneEdit extends React.Component {
             milestone: this.props.milestone.milestone,
             date: this.props.milestone.date,
             description: this.props.milestone.description,
+            photo: this.props.milestone.photo,
         })
     }
 

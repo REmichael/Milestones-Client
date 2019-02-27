@@ -1,5 +1,8 @@
 import React from 'react';
 import './MilestoneTable.css'
+import IconButton from '@material-ui/core/IconButton'
+import DeleteIcon from '@material-ui/icons/Delete';
+import EditIcon from '@material-ui/icons/Edit';
 import {
     Container,
     Row,
@@ -7,6 +10,9 @@ import {
     Table,
     Button
 } from 'reactstrap';
+
+
+
 
 const MilestoneTable = (props) => {
     return (
@@ -20,11 +26,10 @@ const MilestoneTable = (props) => {
                     <Table >
                         <thead>
                             <tr>
-                                {/* <th>#</th> */}
                                 <th>Child's Name</th>
                                 <th>Milestone</th>
                                 <th>Date</th>
-                                <th>Description</th>
+                                <th>Description</th>                    
                             </tr>
                         </thead>
                         <tbody >
@@ -40,8 +45,14 @@ const MilestoneTable = (props) => {
                                             <td>{displayDate}</td>
                                             <td>
                                                 <td>{milestone.description}</td>
-                                                <Button className="delete" id={milestone.id} onClick={props.delete} color="danger">Delete</Button>
-                                                <Button className="update" id={milestone.id} onClick={e => props.update(e, milestone)} color="warning">Update</Button>
+                                                <IconButton>
+                                                <DeleteIcon className="deleteIcon" id={milestone.id} onClick={(e) => props.delete(e, milestone.id)}>Delete</DeleteIcon>
+                                                </IconButton>
+                                                <IconButton>
+                                                    <EditIcon className="editIcon" id={milestone.id} onClick={e => props.update(e, milestone)}>Update</EditIcon>
+                                                </IconButton>
+                                                {/* <Button className="delete" color="danger">Delete<DeleteIcon id={milestone.id} onClick={props.delete} /></Button>
+                                                <Button className="update" id={milestone.id} onClick={e => props.update(e, milestone)} color="warning">Update</Button>  */}
                                             </td>
                                         </tr>
 

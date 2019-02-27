@@ -18,9 +18,12 @@ import {
     Col
 } from 'reactstrap';
 
-const styles = {
+
+
+
+const style = {
     grid: {
-        width: '60%'
+        width: '60%',
     },
 };
 
@@ -31,9 +34,12 @@ class MilestoneCreate extends Component {
             childName: '',
             milestone: '',
             date: new Date(),
-            description: ''
+            description: '',
+            photo: '',
         };
     }
+
+   
 
     handleDateChange = (date) => {
         this.setState({
@@ -65,7 +71,8 @@ class MilestoneCreate extends Component {
                     childName: '',
                     milestone: '',
                     date: new Date(),
-                    description: ''
+                    description: '',
+                    photo: ''
                 })
             })
     }
@@ -75,33 +82,33 @@ class MilestoneCreate extends Component {
         // const { selectedDate } = this.state;
         return (
             <Container className="container" color="info">
-            <Row>
-                <Col>
-                <Form className="mc-div" onSubmit={this.handleSubmit}>
-                    <h3>Enter a Milestone</h3>
-                    <hr />
-                    <FormGroup>
-                        <Label for="childName">Child's Name</Label>
-                        <Input id="childName" type="text" name="childName" value={this.state.childName} placeholder="enter child's name" onChange={this.handleChange} />
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="milestone">Milestone</Label>
-                        <Input id="milestone" type="text" name="milestone" value={this.state.milestone} placeholder="enter Milestone" onChange={this.handleChange} />
-                    </FormGroup>
-                    <FormGroup>
-                        <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                            <Grid container className={classes.grid} justify="space-around">
-                                <DatePicker margin="normal" label="Select a Date" value={this.state.date} onChange={this.handleDateChange} />
-                            </Grid>
-                        </MuiPickersUtilsProvider>
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="description">Description</Label>
-                        <Input id="description" type="text" name="description" className="mc-inputDescription" value={this.state.description} placeholder="enter description" onChange={this.handleChange} />
-                    </FormGroup>
-                    <Button type="submit" color="info">Submit</Button>
-                </Form>
-                </Col>
+                <Row>
+                    <Col>
+                        <Form className="mc-div" onSubmit={this.handleSubmit}>
+                            <h3>Enter a Milestone</h3>
+                            <hr />
+                            <FormGroup>
+                                <Label for="childName">Child's Name</Label>
+                                <Input id="childName" type="text" name="childName" value={this.state.childName} placeholder="enter child's name" onChange={this.handleChange} />
+                            </FormGroup>
+                            <FormGroup>
+                                <Label for="milestone">Milestone</Label>
+                                <Input id="milestone" type="text" name="milestone" value={this.state.milestone} placeholder="enter Milestone" onChange={this.handleChange} />
+                            </FormGroup>
+                            <FormGroup>
+                                <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                                    <Grid container className={classes.grid} justify="space-around">
+                                        <DatePicker margin="normal" label="Select a Date" value={this.state.date} onChange={this.handleDateChange} />
+                                    </Grid>
+                                </MuiPickersUtilsProvider>
+                            </FormGroup>
+                            <FormGroup>
+                                <Label for="description">Description</Label>
+                                <Input id="description" type="text" name="description" className="mc-inputDescription" value={this.state.description} placeholder="enter description" onChange={this.handleChange} />
+                            </FormGroup>
+                            <Button type="submit" color="info">Submit</Button>
+                        </Form>
+                    </Col>
                 </Row>
             </Container>
         );
@@ -112,4 +119,4 @@ MilestoneCreate.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(MilestoneCreate);
+export default withStyles(style)(MilestoneCreate);

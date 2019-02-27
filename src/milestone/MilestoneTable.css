@@ -1,3 +1,12 @@
+.deleteIcon {
+    color: #3F7356
+    ;
+}
+
+.editIcon {
+    color: #3F7356
+    ;
+}
 .h3 {
   text-align: center;  
 }
@@ -41,6 +50,12 @@
 @media(max-width: 767px) {
     .mt-container {
     margin-top:3rem;
+    padding-left: 1rem;
+    width: 100vw;
+    }
+
+    .table-row {
+        width: 3rem;
     }
 }
 
