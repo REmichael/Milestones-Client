@@ -72,7 +72,7 @@ class MilestoneCreate extends Component {
                     milestone: '',
                     date: new Date(),
                     description: '',
-                    photo: '',
+                    image: '',
                 })
             })
     }
