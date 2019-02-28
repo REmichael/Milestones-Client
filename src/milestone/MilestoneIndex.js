@@ -79,7 +79,7 @@ class MilestoneIndex extends Component {
     render() {
         const milestones = this.state.milestones.length >= 1 ?
             <MilestoneTable milestones={this.state.milestones}
-                delete={this.milestoneDelete} update={this.setUpdatedMilestone} /> : <h2 className="sph-h2">Use the Milestones app<br></br> to save those<br></br> fleeting moments<br></br> before they become<br></br> a forgotten memory.</h2>
+                delete={this.milestoneDelete} update={this.setUpdatedMilestone} /> : <h2 className="sph-h2">Track those signficant moments of change and development in your Child's life.</h2>
         return (
             <Container>
                 <Row>

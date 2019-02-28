@@ -18,7 +18,7 @@ const Auth = (props) => {
     return (
         <Container className="auth-container">
                 <h1 className="auth-h1">MILESTONES</h1>
-                <h4 className="auth-h4">An app to track those signficant moments of change and development in your Child's life.</h4>
+                <h4 className="auth-h4">Save those fleeting moments before they become a forgotten memory.</h4>
             <Row>
                 <Col  md="6">
                     <Signup setToken={props.setToken} />
