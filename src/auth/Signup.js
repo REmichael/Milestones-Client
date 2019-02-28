@@ -53,7 +53,7 @@ class Signup extends Component {
                     </FormGroup>
                     <FormGroup>
                         <Label for="password">Password</Label>
-                        <Input id="su_password" type="text" name="password" placeholder="enter password" onChange={this.handleChange} />
+                        <Input id="su_password" type="text" name="password" placeholder="enter password" required onChange={this.handleChange} />
                     </FormGroup>
                     <Button type="submit" className="btn btn-info">Submit</Button>
                 </Form>
