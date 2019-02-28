@@ -36,12 +36,12 @@ class NavBar extends Component {
         return (
             <div className="navbar" style={styles.navbar}>
                 <Navbar color="faded" light expand="md">
-                    <NavbarBrand href="/">M I L E S T O N E S</NavbarBrand>
+                    <NavbarBrand className="navbar-name" href="/">M I L E S T O N E S</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <Button onClick={() => this.props.clickLogout()}>Logout</Button>
+                                <Button id="mr-auto" onClick={() => this.props.clickLogout()}>Logout</Button>
                             </NavItem>
                         </Nav>
                     </Collapse>

@@ -1,10 +1,11 @@
-.splash-phrase {
-    background-color: white;
-}
-
-.sph-h2 {
-    text-align: center;
-    color: brown
+h2 {
+    text-align: left;
+    color: black;
+    text-shadow: 2px 2px 4px grey;
+    font-size: 4.5rem;
+    padding-top: 4rem;
+    font-family: 'Cabin Sketch', cursive;
+    font-weight: 450;
 }
 /* @media (max-width: 991px) {
 }

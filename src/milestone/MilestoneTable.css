@@ -8,7 +8,10 @@
     ;
 }
 .h3 {
-  text-align: center;  
+  text-align: center;
+  font-family: 'Cabin Sketch', cursive;
+  text-shadow: 1px 1px 2px lightcyan,  0 0 5px white;
+  font-size: 3rem;  
 }
 .mt-container {
     background: rgba(115, 209, 156, .7);

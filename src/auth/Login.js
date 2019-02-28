@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import APIURL from '../helpers/environment';
+import './Login.css'
 import {
     Form,
     FormGroup,
@@ -40,7 +41,7 @@ class Login extends Component {
     render() {
         return (
             <div>
-                <h1>Login</h1>
+                <h1 className="login">Login</h1>
                 <h6 style={{"color": "white"}}>What new milestone did your child reach today?</h6>
                 <Form onSubmit={this.handleSubmit}>
                     <FormGroup>

@@ -11,9 +11,17 @@
 } */
 
 .auth-h1 {
-    font-size: 6em;
+    font-size: 6rem;
     text-align: center;
+    font-family: 'Cabin Sketch', cursive;
+    text-shadow: 1px 1px 2px lightcyan,  0 0 5px white;
 }
+
+/* .auth-h4 {
+    text-align: center;
+    text-shadow: 1px 1px 2px lightcyan, 0 0 40px blue, 0 0 5px yellow;
+    padding-bottom: 1rem;
+} */
 
 @media (max-width: 991px) {
 }
@@ -35,6 +43,12 @@
     .login-col {
         padding-top: 2rem;
     }
+    .auth-h4 {
+        text-align: center;
+        font-family: 'Cabin Sketch', cursive;
+        padding-bottom: 1rem;
+        font-weight: bold;
+    }
 }
 
 @media (min-width: 767px) {
@@ -47,6 +61,13 @@
 }
 .login-col {
     border-left: 1px solid black;
+}
+.auth-h4 {
+    text-align: center;
+    padding-bottom: 1rem;
+    color:  rgba(115, 209, 156,);
+    font-family: 'Cabin Sketch', cursive;
+    font-weight: bold;
 }
 }
 

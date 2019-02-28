@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MilestoneCreate from './MilestoneCreate';
 import MilestoneTable from './MilestoneTable';
 import APIURL from '../helpers/environment';
+import './MilestoneIndex.css';
 import {
     Container,
     Row,
@@ -15,7 +16,8 @@ class MilestoneIndex extends Component {
         this.state = {
             milestones: [],
             updatePressed: false,
-            milestoneToUpdate: {}
+            milestoneToUpdate: {},
+           
         }
     }
 
@@ -71,10 +73,13 @@ class MilestoneIndex extends Component {
         })
     }
 
+    
+    
+
     render() {
         const milestones = this.state.milestones.length >= 1 ?
             <MilestoneTable milestones={this.state.milestones}
-                delete={this.milestoneDelete} update={this.setUpdatedMilestone} /> : <div className="splash-phrase"><h2 className="sph-h2">Milestones, an app for a every parent to track those signficant moments of change and development in thier Child's life.<br></br>Use Milestones to save those fleeting moments before they become a forgotten memory.</h2></div>
+                delete={this.milestoneDelete} update={this.setUpdatedMilestone} /> : <h2 className="sph-h2">Use the Milestones app<br></br> to save those<br></br> fleeting moments<br></br> before they become<br></br> a forgotten memory.</h2>
         return (
             <Container>
                 <Row>

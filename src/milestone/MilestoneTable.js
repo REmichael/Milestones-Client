@@ -46,7 +46,7 @@ const MilestoneTable = (props) => {
                                                 <td>{displayDate}</td>
                                                 <td>{milestone.description}</td>
                                                 <td>
-                                                    <img src={milestone.image} width="200"/> <br />
+                                                     <img src={milestone.image} width="200"/><br />
                                                     <IconButton onClick={(e) => props.delete(e, milestone.id)}>
                                                         <DeleteIcon className="deleteIcon" id={milestone.id}>Delete</DeleteIcon>
                                                     </IconButton>
